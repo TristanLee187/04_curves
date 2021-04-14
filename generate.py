@@ -14,20 +14,25 @@ def string(edges):
 def dOnuT():
     for i in range(0, 360, TURN):
         matrix_mult(make_rotY(radians(TURN)), edges)
-        matrix_mult(make_rotX(radians(45)), edges)
-        matrix_mult(make_translate(250, 0, 0), edges)
+        matrix_mult(make_rotX(radians(20)), edges)
+        matrix_mult(make_rotZ(radians(20)), edges)
+        matrix_mult(make_translate(325, 0, 0), edges)
         file.write(string(edges))
-        matrix_mult(make_translate(-250, -0, 0), edges)
-        matrix_mult(make_rotX(radians(-45)), edges)
+        matrix_mult(make_translate(-325, -0, 0), edges)
+        matrix_mult(make_rotZ(radians(-20)), edges)
+        matrix_mult(make_rotX(radians(-20)), edges)
 
 
-TURN = 3
+TURN = 4
 file = open('script2.txt', 'w')
 edges = []
-add_circle(edges, 150, 350, 0, 80, 0.01)
+add_circle(edges, 150, 250, 0, 100, 0.01)
 dOnuT()
 edges = []
-add_circle(edges, 150, 350, 0, 40, 0.01)
+add_circle(edges, 150, 250, 0, 65, 0.01)
+dOnuT()
+edges = []
+add_circle(edges, 150, 250, 0, 30, 0.01)
 dOnuT()
 
 
