@@ -20,10 +20,4 @@ transform = new_matrix()
 # print_matrix( make_rotZ(math.pi/4) )
 
 
-def my():
-    file = open('script2', 'w')
-    
-    pass
-
-
 parse_file( 'script', edges, transform, screen, color )
